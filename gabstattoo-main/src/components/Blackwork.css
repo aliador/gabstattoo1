@@ -1,0 +1,264 @@
+.blackwork-section {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--black);
+  padding: 100px 5% 150px 5%;
+  overflow: hidden;
+  border-bottom: 3px solid var(--white);
+}
+
+.absolute-fundo-frase {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  font-size: 5vw;
+  color: rgba(229, 226, 220, 0.03);
+  pointer-events: none;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* Barbed Wire Diagonal Band */
+.barbed-wire-diagonal {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  width: 120%;
+  height: 50px;
+  transform: rotate(-12deg);
+  z-index: 4;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Massive Vertical Title decoration on right side */
+.vertical-main-title {
+  position: absolute;
+  right: -20px;
+  top: 10%;
+  font-size: 11vw;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+/* Grids */
+.blackwork-grid {
+  display: flex;
+  width: 100%;
+  gap: 6%;
+  z-index: 3;
+  position: relative;
+}
+
+.col-left {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.col-right {
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Brutalist Block Info */
+.brutalist-block-info {
+  background-color: var(--gray-dark);
+  border: 2px solid var(--white);
+  padding: 20px;
+  color: var(--white);
+  width: 100%;
+  max-width: 380px;
+  transform: rotate(-1.5deg);
+}
+
+.border-red {
+  border-left: 6px solid var(--red);
+}
+
+.margin-top-10 {
+  margin-top: 12px;
+}
+
+.text-xs {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.divider-dashed {
+  border-top: 1px dashed rgba(229, 226, 220, 0.3);
+  margin: 15px 0;
+}
+
+.project-stats-ticker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.pulsing-record {
+  color: var(--red);
+  animation: pulse-dot 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Sticker tags */
+.text-bg-red {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+}
+
+/* Tattoo frames */
+.tattoo-frame-small {
+  background-color: var(--gray-dark);
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tattoo-frame-large {
+  background-color: var(--gray-dark);
+  width: 100%;
+  max-width: 480px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  box-shadow: 10px 10px 0px var(--black), 10px 10px 0px 3px var(--white);
+}
+
+.frame-header-tag {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--black);
+  background-color: var(--white);
+  padding: 3px 6px;
+  display: inline-block;
+  align-self: flex-start;
+  font-weight: 800;
+}
+
+.tattoo-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.4) brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.tattoo-image.color-preserved-flash {
+  filter: grayscale(0) contrast(1.4) brightness(0.9);
+}
+
+.tattoo-image-heavy {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.6) brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.tattoo-frame-small:hover .tattoo-image,
+.tattoo-frame-large:hover .tattoo-image-heavy {
+  filter: grayscale(0.2) contrast(1.1) brightness(1.0);
+}
+
+.tattoo-frame-small:hover .tattoo-image.color-preserved-flash {
+  filter: grayscale(0) contrast(1.1) brightness(1.0);
+}
+
+.frame-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-black-footer {
+  background: var(--black);
+  padding: 12px;
+  border: 1px dashed rgba(229, 226, 220, 0.2);
+}
+
+.bg-black-footer .place-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-red-accent {
+  color: var(--red);
+}
+
+.frame-footer .desc {
+  margin-top: 8px;
+  color: #a3a09a;
+  line-height: 1.4;
+}
+
+.frame-footer .vertical-year {
+  font-size: 24px;
+  color: rgba(229, 226, 220, 0.15);
+  transform: rotate(90deg);
+  font-weight: 950;
+  letter-spacing: -2px;
+}
+
+/* Repeating ticker rotated at index */
+.rotate-ticker {
+  position: absolute;
+  bottom: 30px;
+  left: -5%;
+  width: 110%;
+  transform: rotate(2deg);
+  z-index: 10;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .blackwork-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .col-left, .col-right {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brutalist-block-info {
+    max-width: 100%;
+  }
+
+  .tattoo-frame-small, .tattoo-frame-large {
+    max-width: 100%;
+  }
+  
+  .vertical-main-title {
+    display: none;
+  }
+
+  .rotate-ticker {
+    bottom: 20px;
+  }
+}

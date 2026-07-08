@@ -1,0 +1,8 @@
+{
+  "name": "Remix: GabsTattoo",
+  "description": "Experiência digital, zine punk e portfólio de tatuagem Cyber Tribal e Blackwork de GabsTattoo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
