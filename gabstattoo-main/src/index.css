@@ -290,13 +290,14 @@ body::after {
 
   .mobile-link {
     font-size: 24px;
-    color: var(--white);
+    color: var(--red);
     text-decoration: none;
     font-weight: 900;
     letter-spacing: 2px;
     transition: color 0.2s;
   }
   
+  .mobile-link:hover,
   .mobile-link:active {
     color: var(--red);
   }
